@@ -1,9 +1,15 @@
 package main
 
 import(
-	"fmt"
+	"strings"
 )
 
 func main(){
-	fmt.Println("Hello World!")
+	repl()
+}
+
+func cleanInput(text string) []string{
+	lower := strings.ToLower(text)
+	sliced := strings.Fields(lower)
+	return sliced
 }
